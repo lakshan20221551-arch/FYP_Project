@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .result-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .result-text {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .Graduate {
+            color: #198754;
+        }
+
+        /* Success Green */
+        .Enrolled {
+            color: #0d6efd;
+        }
+
+        /* Primary Blue */
+        .Dropout {
+            color: #dc3545;
+        }
+
+        /* Danger Red */
+    </style>
+</head>
+
+<body>
+
+    <div class="result-card">
+        <h2 class="text-muted mb-4">Prediction Result</h2>
+
+        <div class="result-text {{ prediction_text }}">
+            {{ prediction_text }}
+        </div>
+
+        <p class="mt-4">Based on the provided student data, the model predicts the above outcome.</p>
+
+        <div class="mt-5">
+            <a href="/" class="btn btn-outline-primary">Make Another Prediction</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
